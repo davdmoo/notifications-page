@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url(./assets/fonts/PlusJakartaSans.ttf);
+  font-style: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  font-family: "PlusJakartaSans";
+  max-width: 425px;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 22px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 500;
+  color: hsl(219, 12%, 42%);
+}
+
+main {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notif-number-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#notif-number {
+  background-color: hsl(219, 85%, 26%);
+  padding: 0px 12px 0px 12px;
+  border-radius: 8px;
+  margin-left: 8px;
+}
+
+#toggle-read:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+
+.notification {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.with-picture {
+  /* justify-content: space-between; */
+  position: relative;
+}
+
+.notification:last-of-type {
+  margin-bottom: 16px;
+}
+
+.unread-notification {
+  background-color: hsl(210, 60%, 98%);
+}
+
+.notification img {
+  width: 36px;
+  height: 36px;
+}
+
+.content {
+  margin-left: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: hsl(219, 14%, 63%);
+}
+
+.name {
+  font-weight: 800;
+  color: black;
+  margin-right: 4px;
+}
+
+.name:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+
+.post-name {
+  font-weight: 800;
+  color: hsl(219, 12%, 42%);
+  margin-left: 4px;
+}
+.post-name:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+
+.read-indicator {
+  height: 8px;
+  width: 8px;
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 4px;
+  visibility: hidden;
+}
+
+.unread-indicator {
+  visibility: visible;
+}
+
+.private-msg {
+  border-radius: 8px;
+  border: 1px solid hsl(211, 68%, 94%);
+  padding: 12px;
+  margin: 8px 0 0 0;
+}
+
+.private-msg:hover {
+  background-color: hsl(211, 68%, 94%);
+  cursor: pointer;
+}
+
+.post-img:hover {
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  bottom: 8px;
+  font-size: 11px;
+  text-align: center;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    max-width: 100vw;
+    background-color: hsl(210, 60%, 98%);
+    justify-content: center;
+  }
+
+  main {
+    max-width: 640px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 16px;
+    padding: 32px;
+  }
+
+  .notification:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  .post-img {
+    position: absolute;
+    right: 16px;
+  }
+
+  .with-picture {
+    position: relative;
+  }
+}
